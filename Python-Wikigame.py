@@ -4,8 +4,6 @@ import sys
 import math
 import os
 
-
-
 i = 1
 liens = []
 listeLiens = []
@@ -129,7 +127,6 @@ def ChoixNumero():
         if listeTitrePage[numeroLien] == titreDepart:
             print("Retour impossible")
         else:
-            #url = listeURLPage[numeroLien-1]
             listeURLPage.pop() 
             listeTitrePage.pop()     
             liens = listeLiens[numeroLien-1]
@@ -199,7 +196,7 @@ def extraireLiensWiki():
         
         for lien in liens:
             if i <=20:
-                print(str(liens[i-1].index-1) + " - " +liens[i-1].nom)
+                print(str(lien[i-1].index-1) + " - " +lien[i-1].nom)
                 i+=1
             else:
                 i+=1
